@@ -1,5 +1,6 @@
 package com.kalixia.tapestry.perf4j.services;
 
+import org.apache.tapestry5.ioc.OperationTracker;
 import org.apache.tapestry5.model.MutableComponentModel;
 import org.apache.tapestry5.services.ClassTransformation;
 import org.apache.tapestry5.services.ComponentClassTransformWorker;
@@ -12,24 +13,32 @@ import org.perf4j.slf4j.Slf4JStopWatch;
 import org.slf4j.LoggerFactory;
 
 public class Perf4JWorker implements ComponentClassTransformWorker {
-    public void transform(ClassTransformation transformation, MutableComponentModel model) {
-        // Profiled methods
-        for (TransformMethod method : transformation.matchMethodsWithAnnotation(Profiled.class)) {
-            transformMethod(transformation, method);
-        }
+    private final OperationTracker tracker;
+
+    public Perf4JWorker(OperationTracker tracker) {
+        this.tracker = tracker;
     }
 
-    private void transformMethod(final ClassTransformation transformation, final TransformMethod profiledMethod) {
-        ComponentMethodAdvice profiledMethodAdvice = new ComponentMethodAdvice() {
-            public void advise(ComponentMethodInvocation invocation) {
-                Profiled annotation = transformation.getAnnotation(Profiled.class);
-                StopWatch watch = new Slf4JStopWatch(annotation.tag(), annotation.message(),
-                        LoggerFactory.getLogger(annotation.logger()));
-                watch.start();
-                invocation.proceed();
-                watch.stop();
-            }
-        };
-        profiledMethod.addAdvice(profiledMethodAdvice);
+    public void transform(final ClassTransformation transformation, final MutableComponentModel model) {
+        // Profiled methods
+        for (final TransformMethod method : transformation.matchMethodsWithAnnotation(Profiled.class)) {
+            tracker.run("Profiling method " + method.getName(), new Runnable() {
+                public void run() {
+                    ComponentMethodAdvice profiledMethodAdvice = new ComponentMethodAdvice() {
+                        public void advise(ComponentMethodInvocation invocation) {
+                            Profiled annotation = transformation.getMethodAnnotation(method.getSignature(), Profiled.class);
+                            String tag = annotation.tag();
+                            String message = annotation.message();
+                            StopWatch watch = new Slf4JStopWatch(tag, message,
+                                    LoggerFactory.getLogger(annotation.logger()));
+                            watch.start();
+                            invocation.proceed();
+                            watch.stop();
+                        }
+                    };
+                    method.addAdvice(profiledMethodAdvice);
+                }
+            });
+        }
     }
 }
