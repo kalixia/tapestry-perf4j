@@ -14,7 +14,7 @@ Displaying Profiling Graphs
 
 %{include|source=snippets/graphs.html|show-gutter=false}
 
- The <<<graphs>>> component display a combo box populated with the list of
+ The <<<graphs>>> component displays a combo box populated with the list of
  available graphs. On each graph selection, the corresponding graph is
  displayed with the help of an AJAX update.
 
