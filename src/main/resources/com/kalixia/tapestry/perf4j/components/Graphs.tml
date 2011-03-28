@@ -1,0 +1,12 @@
+<t:container xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+
+    <t:form>
+        <t:label for="graphChosen"/>
+        <t:select t:id="graphChosen" t:model="graphNames" t:value="graph" t:zone="graphZone"/>
+    </t:form>
+
+    <t:zone id="graphZone" t:id="graphZone" t:update="show">
+        <span t:type="perf4j/graph" t:name="graph"/>
+    </t:zone>
+
+</t:container>

@@ -1,0 +1,7 @@
+<t:container xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+
+    <t:if test="nameGiven">
+        <img src="${chartUrl}" alt="Performance Graph for ${name}"/>
+    </t:if>
+
+</t:container>
