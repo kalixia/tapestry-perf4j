@@ -17,7 +17,7 @@
     <scm>
         <connection>scm:git:ssh://git@github.com:kalixia/tapestry-perf4j.git</connection>
         <developerConnection>scm:git:ssh://git@github.com:kalixia/tapestry-perf4j.git</developerConnection>
-        <url>https://github.com/kalixia/tapestry-perf4j</url>
+        <url>http://kalixia.github.com/tapestry-perf4j/</url>
     </scm>
 
     <organization>
