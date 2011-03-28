@@ -53,6 +53,10 @@
             <id>gh-pages</id>
             <url>file:///${basedir}/../${project.artifactId}-pages/repository/</url>
         </repository>
+        <site>
+            <id>gh-pages</id>
+            <url>file:///${basedir}/../${project.artifactId}-pages/</url>
+        </site>
     </distributionManagement>
 
     <dependencies>
