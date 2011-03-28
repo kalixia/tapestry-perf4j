@@ -1,0 +1,30 @@
+ -----
+Profiling Services
+ ------
+Jerome Bernard
+ ------
+28 March 2011
+ ------
+
+Profiling Services
+
+ Profiling of Tapestry services is based on Java annotations.
+
+ The {{{http://perf4j.codehaus.org/}Perf4J}} <<<@Profiled>>> annotation
+ is scanned on services interface methods.
+ (Please note that this won't work on service implementation classes!)
+
+ Any service interface method annotated with this annotation is intercepted
+ by tapestry-perf4j module in order to wrap the service calls with <<<StopWatch>>>
+ creations.
+
+* Customization
+
+ The <<<@Profiled>>> annotation allow various settings, one of the most important
+ one being the <<<tag>>> parameter.
+
+ One the following screenshot, a service interface method was annotated with
+ <<<@Profiled(tag = "cassandra.users.findAll")>>>
+
+[./images/graph-selection.png]
+

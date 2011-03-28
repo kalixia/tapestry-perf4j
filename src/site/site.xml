@@ -6,12 +6,17 @@
     </skin>
 
 	<body>
-        <!--<menu name="Main">-->
-			<!--<item name="Welcome" href="./index.html"/>-->
-        <!--</menu>-->
+        <menu name="Main">
+            <item name="Welcome" href="./index.html"/>
+            <item name="Setup" href="./setup.html"/>
+            <item name="Perf4J Setup" href="./perf4j-setup.html"/>
+        </menu>
 
-        <!--<menu ref="parent" inherit="top"/>-->
-        <!--<menu ref="modules" inherit="top"/>-->
+        <menu name="Profiling">
+            <item name="Pages" href="./profiling-pages.html"/>
+            <item name="Services" href="./profiling-services.html"/>
+        </menu>
+
         <menu ref="reports" inherit="top"/>
 	</body>
 </project>

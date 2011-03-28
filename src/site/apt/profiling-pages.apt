@@ -1,0 +1,22 @@
+ -----
+Profiling Pages
+ ------
+Jerome Bernard
+ ------
+28 March 2011
+ ------
+
+Profiling Pages
+
+ Profiling pages is the most easy profiling technique.
+
+ Actually, you do not have to do anything except use this module :)
+
+ Under the hood, tapestry-perf4j do intercept all pages requests and create a
+ {{{http://perf4j.codehaus.org/}Perf4J}} <<<StopWatch>>> whose tag is the name
+ of the intercepted page, prefixed with <<<page.>>>
+
+ This is illustrated on the above screenshot where some pages have been profiled:
+
+[./images/graph-selection.png]
+

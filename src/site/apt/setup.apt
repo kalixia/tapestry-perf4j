@@ -1,0 +1,27 @@
+ -----
+Setup
+ ------
+Jerome Bernard
+ ------
+28 March 2011
+ ------
+
+Setup
+
+* Maven
+
+ Adding {{{http://perf4j.codehaus.org/}Perf4J}} to your application is
+ so easy with Tapestry support for autoloading modules that all you need
+ to do is to include the <<<tapestry-perf4j>>> module as a Maven dependency:
+
+%{include|source=snippets/pom.xml|id=tapestry-perf4j-dependency|show-gutter=false}
+
+ Tapestry will then find out that the <<<tapestry-perf4j>>> module is available and
+ initialize it properly.
+
+ <<Don't forget to {{{./perf4j-setup.html}setup Perf4J}} in order to get it working!>>
+
+* Profiling Pages and Services
+
+ Each of those profiling strategies are defined in the <<Profiling>> section on the left.
+

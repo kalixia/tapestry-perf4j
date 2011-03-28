@@ -1,0 +1,39 @@
+ -----
+Welcome to tapestry-perf4j module
+ ------
+Jerome Bernard
+ ------
+28 March 2011
+ ------
+
+Welcome to tapestry-perf4j module
+
+* Introduction
+
+ {{{http://perf4j.codehaus.org/}Perf4J}} defines itself as being what Log4J
+ is to logging in Java.
+
+ This tools proves to be really useful in order to gather performance metrics.
+
+ {{{http://perf4j.codehaus.org/}Perf4J}} provides some integration with
+ {{{http://www.springframework.org}Spring}}, especially the AOP stuff.
+
+ Unfortunately 'til tapestry-perf4j, there was no easy way to reuse
+ <<<@Profiled>>> annotations within Tapestry.
+
+ Although this work is still in progress, it is already useful in many situations.
+
+
+* Tapestry Components
+
+ What started as a way to gather performance metrics within Tapestry applications
+ turned out to be more interesting when graphs could be generated too.
+
+ Two Tapestry components are available, allowing to either:
+   - generate a specific {{{http://perf4j.codehaus.org/}Perf4J}} graph,
+   - generate all {{{http://perf4j.codehaus.org/}Perf4J}} graphs with a graph chooser and some AJAX magic
+
+ The output of the components is illustrated on the following screenshot:
+
+[./images/graph-selection.png]
+

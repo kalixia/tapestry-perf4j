@@ -1,0 +1,46 @@
+ -----
+Perf4J Setup
+ ------
+Jerome Bernard
+ ------
+28 March 2011
+ ------
+
+Perf4J Setup
+
+%{toc}
+
+ This page is not meant to be a replacement to the official
+ {{{http://perf4j.codehaus.org/}Perf4J}} documentation.
+
+ This documentation describes how to setup Perf4J through Log4J.
+
+* CoalescingStatistics Appender
+
+ The <<<CoalescingStatistics>>> appender is meant to asynchronously group watches by tag.
+ You usually define it with one <<<appender-ref>>> per graph you want to generate and
+ eventually one for file storage and another one for JMX exposure of the watches.
+
+ Here is a <complete> version for 2 graphs and the file and JMX appenders:
+
+%{include|source=log4j.xml|id=perf4j-CoalescingStatistics|show-gutter=false}
+
+* File Appender
+
+%{include|source=log4j.xml|id=perf4j-fileAppender|show-gutter=false}
+
+ This appender will generate a file named <<<perfStats.log>>> having grouped (by tag)
+ performance metrics every 30 seconds (as defined in the <<<CoalescingStatistics>>> appender.
+
+* Graph Appenders
+
+%{include|source=log4j.xml|id=perf4j-graphAppenders|show-gutter=false}
+
+ Those appenders will collect data in 2 different graphs: <<<graphExecutionTimes>>> and
+ <<<graphExecutionTPS>>> whose definitions are quite self explanatory.
+
+* Perf4J Logger
+
+ Finally a logger needs to be defined:
+
+%{include|source=log4j.xml|id=perf4j-logger|show-gutter=false}
