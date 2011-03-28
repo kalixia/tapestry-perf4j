@@ -1,0 +1,4 @@
+<t:container xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" title="Performance">
+    <h4>Performance</h4>
+    <span t:id="graphs" t:type="perf4j/Graphs"/>
+</t:container>
