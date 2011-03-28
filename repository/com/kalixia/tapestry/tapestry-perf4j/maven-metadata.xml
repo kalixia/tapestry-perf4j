@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.kalixia.tapestry</groupId>
+  <artifactId>tapestry-perf4j</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20110328134227</lastUpdated>
+  </versioning>
+</metadata>
