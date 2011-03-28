@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="4.2.5" timestamp="2011-03-28T21:09:44.315">
+<file name="/Users/jeje/Documents/Development/Kalixia/tapestry-perf4j/src/main/java/com/kalixia/tapestry/perf4j/components/Graph.java">
+<violation beginline="38" endline="38" begincolumn="33" endcolumn="38" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.kalixia.tapestry.perf4j.components" class="Graph" variable="logger" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'logger'.
+</violation>
+</file>
+<file name="/Users/jeje/Documents/Development/Kalixia/tapestry-perf4j/src/main/java/com/kalixia/tapestry/perf4j/components/Graphs.java">
+<violation beginline="41" endline="41" begincolumn="20" endcolumn="24" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.kalixia.tapestry.perf4j.components" class="Graphs" variable="graph" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'graph'.
+</violation>
+<violation beginline="50" endline="50" begincolumn="33" endcolumn="38" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="com.kalixia.tapestry.perf4j.components" class="Graphs" variable="logger" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'logger'.
+</violation>
+</file>
+</pmd>
