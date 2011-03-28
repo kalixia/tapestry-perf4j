@@ -48,24 +48,12 @@
         </developer>
     </developers>
 
-    <!--<distributionManagement>-->
-        <!--<repository>-->
-            <!--<id>mc-release</id>-->
-            <!--<name>Local Maven repository of releases</name>-->
-            <!--<url>dav:https://mc-repo.googlecode.com/svn/maven2/releases</url>-->
-        <!--</repository>-->
-        <!--<snapshotRepository>-->
-            <!--<id>mc-snapshot</id>-->
-            <!--<name>Local Maven repository of snapshots</name>-->
-            <!--<url>dav:https://mc-repo.googlecode.com/svn/maven2/snapshots</url>-->
-            <!--<uniqueVersion>false</uniqueVersion>-->
-        <!--</snapshotRepository>-->
-        <!--<site>-->
-            <!--<id>website</id>-->
-            <!--<name>website</name>-->
-            <!--<url>file://${basedir}/target/dist/site/maven-license-plugin/</url>-->
-        <!--</site>-->
-    <!--</distributionManagement>-->
+    <distributionManagement>
+        <repository>
+            <id>gh-pages</id>
+            <url>file:///${basedir}/../${project.artifactId}-pages/repository/</url>
+        </repository>
+    </distributionManagement>
 
     <dependencies>
         <dependency>
