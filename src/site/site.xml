@@ -17,6 +17,10 @@
             <item name="Services" href="./profiling-services.html"/>
         </menu>
 
+        <menu name="Displaying Graphs">
+            <item name="Basic Usage" href="./graphs-basic-usage.html"/>
+        </menu>
+
         <menu ref="reports" inherit="top"/>
 	</body>
 </project>

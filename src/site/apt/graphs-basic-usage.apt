@@ -1,0 +1,24 @@
+ -----
+Displaying Profiling Graphs
+ ------
+Jerome Bernard
+ ------
+28 March 2011
+ ------
+
+Displaying Profiling Graphs
+
+ The <<<tapestry-perf4j>>> is made of 2 Tapestry components.
+
+ The basic usage is:
+
+%{include|source=snippets/graphs.html|show-gutter=false}
+
+ The <<<graphs>>> component display a combo box populated with the list of
+ available graphs. On each graph selection, the corresponding graph is
+ displayed with the help of an AJAX update.
+
+ The {{{./ref/index.html}reference documentation for the provided components}}
+ is available for more information.
+
+
