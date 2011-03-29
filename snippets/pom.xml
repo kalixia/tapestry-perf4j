@@ -119,6 +119,12 @@
     </properties>
 
     <repositories>
+        <!-- START SNIPPET: tapestry-perf4j-repository -->
+        <repository>
+            <id>tapestry-perf4j</id>
+            <url>http://kalixia.github.com/tapestry-perf4j/repository/</url>
+        </repository>
+        <!-- END SNIPPET: tapestry-perf4j-repository -->
         <repository>
             <id>tapestry-releases</id>
             <url>https://repository.apache.org/content/repositories/releases/</url>
