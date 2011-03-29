@@ -28,13 +28,13 @@ public class Perf4JComponentRequestFilter implements ComponentRequestFilter {
     public void handleComponentEvent(ComponentEventRequestParameters parameters, ComponentRequestHandler handler) throws IOException {
         StopWatch watch = profilePage(parameters.getActivePageName());
         handler.handleComponentEvent(parameters);
-        watch.stop();
+        watch.stop(watch.getTag(), "Component event handled");
     }
 
     public void handlePageRender(PageRenderRequestParameters parameters, ComponentRequestHandler handler) throws IOException {
         StopWatch watch = profilePage(parameters.getLogicalPageName());
         handler.handlePageRender(parameters);
-        watch.stop();
+        watch.stop(watch.getTag(), "Page rendered");
     }
 
     private StopWatch profilePage(String pageName) {
