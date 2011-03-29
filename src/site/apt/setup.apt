@@ -16,6 +16,11 @@ Setup
 
 %{include|source=snippets/pom.xml|id=tapestry-perf4j-dependency|show-gutter=false}
 
+ This will of course only work if you declare the <<<tapestry-perf4j>>> repository
+ in your pom.xml:
+
+%{include|source=snippets/pom.xml|id=tapestry-perf4j-repository|show-gutter=false}
+
  Tapestry will then find out that the <<<tapestry-perf4j>>> module is available and
  initialize it properly.
 
