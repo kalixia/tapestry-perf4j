@@ -63,7 +63,7 @@
         <dependency>
             <groupId>org.apache.tapestry</groupId>
             <artifactId>tapestry-core</artifactId>
-            <version>[5.2.4,)</version>
+            <version>[5.2.5,)</version>
         </dependency>
         <dependency>
             <groupId>org.perf4j</groupId>
