@@ -28,7 +28,7 @@ public class Perf4JComponentRequestFilter implements ComponentRequestFilter {
     public void handleComponentEvent(ComponentEventRequestParameters parameters, ComponentRequestHandler handler) throws IOException {
         StopWatch watch = profilePage(parameters.getActivePageName());
         handler.handleComponentEvent(parameters);
-        watch.stop(watch.getTag(), "Component event handled<<<<<");
+        watch.stop(watch.getTag(), "Component event handled");
     }
 
     public void handlePageRender(PageRenderRequestParameters parameters, ComponentRequestHandler handler) throws IOException {
